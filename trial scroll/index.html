@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="heroback">
+    <img id="i2" src="4k-mountain-l3f04sogeaabr5h0-removebg.png" alt="">
+   <button><a href="zoom.html">TRIAl</a></button>
+</div>
+<div class="content">
+    <a href="zoom.html">
+        Content goes here!
+    </a>>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis possimus minus voluptatum nobis, iure molestiae, id repudiandae fugit a culpa mollitia voluptatem illum vitae harum voluptas asperiores tenetur? Ducimus, dignissimos.</p>
+
+</div>
+
+<script type="text/javascript">
+
+    // $("button").on("click",()=>{
+    //     var id = $(this).id;
+
+    // });
+
+    // window.onscroll();
+    $(window).scroll(()=> {
+        console.log("scrolling",$(this));
+        var scrollPos = $(this).scrollTop();
+        console.log(scrollPos);
+        // $(".heroback").css('transform', "scale(" + 1 +scrollPos%1 + ")");
+        // if (scrollPos<2000) {
+       if(scrollPos < 1200){ $(".heroback").css('background-size' , 100 + scrollPos/2 + '%');}
+       if(scrollPos < 1200){ $(".content").css('background-size' , 100 + scrollPos/5 + '%');
+        // $("#i2").css('width' , 100 + scrollPos + '%');
+
+        }
+        
+    });
+
+
+    // callback function 
+    
+</script>
+
+
+
+</body>
+</html>

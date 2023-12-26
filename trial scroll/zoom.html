@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+<style>
+    /* .z{
+        height: 50vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+} */
+.zoom{
+    height: 100vh;
+    width: 100%;
+    /* background-color: red; */
+    position: fixed;
+    top:0;
+    left:0;
+    
+    background-color: rgb(238, 232, 232);
+    display: flex;
+    color: darkblue;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    overflow: scroll;
+}
+
+
+h1{
+    font-size: 1.5em;
+    margin-right: 30%;
+}
+
+.cont{
+    font-size: 1.3em;
+}
+.temp{
+    height: 700vh;
+    width: 100vh;
+}
+body{
+    background-color: rgb(238, 232, 232);
+
+}
+
+</style>
+
+</head>
+<body>
+    <a href="prank.html">
+        Content goes here!
+    </a>>
+    <div class="zoom">
+        <h1>Thadomal Shahani Engineering College</h1>
+    </div>
+    <div class="temp">
+
+    </div>
+   
+    
+</body>
+<script type="text/javascript">
+
+    const zoomElement = document.querySelector("h1");
+    let zoomm = 2;
+    const ZOOM_SPEEDD = 1;
+    
+    let zoo = document.getElementsByClassName("zoom")[0];
+    console.log("xy : ", zoo);
+    
+    window.addEventListener("scroll", (e) => {
+        let topVal = $(window).scrollTop();
+        let windowWidth = window.innerWidth;
+    
+        // Adjust the scaling factor based on the window width
+        let scaleFactor = 1 + topVal * 0.009 - (windowWidth < 600 ? 0.1 : 0);
+    
+        if (topVal >= 4000) {
+            zoo.style.display = 'none';
+        } else if (topVal < 4000) {
+            zoo.style.display = 'flex';
+        }
+    
+        zoomElement.style.transform = `scale(${scaleFactor})`;
+    });
+
+
+    
+    </script>
+
+<!-- <script type="text/javascript">
+
+const zoomElement = document.querySelector("h1");
+// const zoo = document.querySelector("zoom");
+let zoomm = 2;
+const ZOOM_SPEEDD =1 ;
+
+let zoo = document.getElementsByClassName("zoom")[0]
+console.log("xy : ",zoo);
+window.addEventListener("scroll", (e) =>{  
+    // alert("dd");
+    let topVal = $(window).scrollTop();
+    console.log(topVal)
+
+    if(topVal >=4000){
+        zoo.style.display = 'none';
+    }
+    else if (topVal <4000){
+        zoo.style.display = 'flex';
+    }
+    zoomElement.style.transform = `scale(${1 + topVal*0.12})`;
+    
+});
+
+
+
+
+</script> -->
+
+</html>
